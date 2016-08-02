@@ -9,6 +9,12 @@ namespace Mathmagician.Tests
         [TestMethod]
         public void TestMethod1()
         {
+            // arrange
+
+            // act 
+
+            // assert
+
         }
     }
 }
