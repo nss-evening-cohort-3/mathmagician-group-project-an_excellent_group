@@ -33,5 +33,12 @@ namespace Mathmagician.Tests
             int next_last_int = int_sequence.integers[3];
             Assert.IsTrue(last_int != next_last_int);
         }
+        [TestMethod]
+        public void WhatHappensIfYouInputZero()
+        {
+            Integer int_with_zero = new Integer();
+            int_with_zero.GenerateIntegers(0);
+            Assert.IsTrue(int_with_zero.integers.Count == 0);
+        }
     }
 }
