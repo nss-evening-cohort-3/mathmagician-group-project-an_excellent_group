@@ -30,6 +30,9 @@ namespace Mathmagician
                 if (isItAnInt)
                 {
                     Console.WriteLine("Printing " + printThisManyNumbers + " integers! MAGIC!");
+                    Integer integer = new Integer();
+                    integer.GenerateIntegers(printThisManyNumbers);
+                    Console.WriteLine("Hope you like your integers, friend! Press any key to close. MATHMAGICIAN AWAY!");
                 }
                 else
                 {
