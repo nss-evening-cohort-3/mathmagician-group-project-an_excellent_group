@@ -8,16 +8,28 @@ namespace Mathmagician
 {
     public class EvenNumber
     {
-        //create a new number (that's supposed to be even)
-        public int usereven { get; set; }
-
-        //create a counter that will add 2 to each number following the "usereven"
-        public int counter = 2;
-
-        //create a method that adds 2 to the usereven number 
-        public int Add2ToUserEven(int usereven, int counter)
+        
+        //create a method that returns however many numbers in a list item 
+        public List<int> CreateEvennNumberList(int usernumberoftimes)
         {
-            return usereven + counter; 
+            //Create an empty list that the numbers will go inside of.
+             List<int> usernumbers = new List<int>();
+
+            //create the number that the list will start at
+            int mycounter = 0;
+
+            //loop through the number that represents the number of even numbers that the user wants
+            for (var i=0; i < usernumberoftimes; i++)
+            {
+                //add the counter (the starting number) to the empty list
+                usernumbers.Add(mycounter);
+
+                //increment the counter by 2 each time the loop occurs.
+                mycounter = mycounter + 2;
+            }
+
+            //send back the list after the loop is finished.
+            return usernumbers;
         }
     }
 

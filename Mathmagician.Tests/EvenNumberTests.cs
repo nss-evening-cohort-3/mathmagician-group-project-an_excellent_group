@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Mathmagician.Tests
@@ -18,26 +19,16 @@ namespace Mathmagician.Tests
             Assert.IsNotNull(usereven);
         }
 
-
         [TestMethod]
-        public void CheckIfUserNumberIsEven()
+        public void TestCreateEvenListWorks()
         {
             EvenNumber neweven = new EvenNumber();
 
-            neweven.usereven = 7;
+            List<int> newlist = neweven.CreateEvennNumberList(5);
 
-            Assert.IsFalse(neweven.usereven % 2 == 0);
+            List<int> testlist = new List<int>() { 0, 2, 4, 6, 8 };
 
-        }
-
-        [TestMethod]
-        public void CheckIfAdding2Works()
-        {
-            EvenNumber neweven = new EvenNumber();
-
-            neweven.usereven = 4;
-
-            Assert.AreEqual(6, neweven.usereven + neweven.counter);
+            CollectionAssert.AreEqual(testlist, newlist);
         }
     }
 }
