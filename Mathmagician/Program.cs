@@ -72,7 +72,7 @@ namespace Mathmagician
                     }
                     else
                     {
-                        Console.WriteLine("Printing " + printThisManyNumbers + " integers! MAGIC!");
+                        Console.WriteLine("Printing " + printThisManyNumbers + " Fibonaccis! MAGIC!");
                         //call number-generating method here. ex: Integers.GenerateIntegers(printThisManyNumbers)
                     }
                 }
@@ -99,7 +99,7 @@ namespace Mathmagician
                     }
                     else
                     {
-                        Console.WriteLine("Printing " + printThisManyNumbers + " integers! MAGIC!");
+                        Console.WriteLine("Printing " + printThisManyNumbers + " primes! MAGIC!");
                         //call number-generating method here. ex: Integers.GenerateIntegers(printThisManyNumbers)
                     }
                 }
@@ -126,7 +126,7 @@ namespace Mathmagician
                     }
                     else
                     {
-                        Console.WriteLine("Printing " + printThisManyNumbers + " integers! MAGIC!");
+                        Console.WriteLine("Printing " + printThisManyNumbers + " evens! MAGIC!");
                         //call number-generating method here. ex: Integers.GenerateIntegers(printThisManyNumbers)
                     }
                 }
@@ -153,7 +153,7 @@ namespace Mathmagician
                     }
                     else
                     {
-                        Console.WriteLine("Printing " + printThisManyNumbers + " integers! MAGIC!");
+                        Console.WriteLine("Printing " + printThisManyNumbers + " odds! MAGIC!");
                         //call number-generating method here. ex: Integers.GenerateIntegers(printThisManyNumbers)
                     }
                 }
