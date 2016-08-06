@@ -7,7 +7,7 @@ namespace Mathmagician.Tests
     public class IntegerTests
     {
         [TestMethod]
-        public void IntegerEnsureICanCreateAnInstance()
+        public void EnsureICanCreateAnInstance()
         {
             //arrange
 
@@ -54,6 +54,14 @@ namespace Mathmagician.Tests
             hereAreSomeIntegers.GenerateIntegers(8);
             int should_be_seven = hereAreSomeIntegers.integers[7];
             Assert.IsTrue(should_be_seven == 7);
+        }
+        [TestMethod]
+        public void WhatAboutALargeNumber()
+        {
+            Integer biggun = new Integer();
+            biggun.GenerateIntegers(123451);
+            int InputNumberMinusOne = biggun.integers[123450];
+            Assert.IsTrue(InputNumberMinusOne == 123450);
         }
     }
 }
