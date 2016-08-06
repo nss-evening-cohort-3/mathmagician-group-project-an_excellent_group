@@ -25,7 +25,9 @@ namespace Mathmagician.Tests
         {
             Fibonacci fibWithZero = new Fibonacci();
             fibWithZero.GenerateFibonacci(0);
-            Assert.IsTrue(fibWithZero.sequence.Count == 0);
+            //the array already contains the first two numbers, 1 1
+            //this assert makes sure no new numbers were added.
+            Assert.IsTrue(fibWithZero.sequence.Count == 2);
         }
         [TestMethod]
         public void AreTheyFibonacciNumbers()
@@ -50,6 +52,26 @@ namespace Mathmagician.Tests
             checkNumberOrder.GenerateFibonacci(3);
             int third_fibonacci = checkNumberOrder.sequence[2];
             Assert.IsTrue(third_fibonacci == 2);
+        }
+        [TestMethod]
+        public void TheFirstTwoNumbersShouldBeOneOne()
+        {
+            Fibonacci firstTwoNumbers = new Fibonacci();
+            firstTwoNumbers.GenerateFibonacci(2);
+            int first_fibonacci = firstTwoNumbers.sequence[0];
+            int second_fibonacci = firstTwoNumbers.sequence[1];
+            Assert.IsTrue(first_fibonacci == 1);
+            Assert.IsTrue(second_fibonacci == 1);
+        }
+        [TestMethod]
+        public void WhatAboutALargeNumber()
+        {
+            Fibonacci bigNumber = new Fibonacci();
+            bigNumber.GenerateFibonacci(123451);
+            int third_last_fibonacci = bigNumber.sequence[123448];
+            int second_last_fibonacci = bigNumber.sequence[123449];
+            int last_fibonacci = bigNumber.sequence[123450];
+            Assert.IsTrue(last_fibonacci == (third_last_fibonacci + second_last_fibonacci));
         }
     }
 }
