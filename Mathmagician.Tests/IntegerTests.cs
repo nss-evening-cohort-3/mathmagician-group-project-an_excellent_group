@@ -40,5 +40,20 @@ namespace Mathmagician.Tests
             int_with_zero.GenerateIntegers(0);
             Assert.IsTrue(int_with_zero.integers.Count == 0);
         }
+        [TestMethod]
+        public void ListOfIntegers()
+        {
+            Integer hasList = new Integer();
+            Assert.IsNotNull(hasList.integers);
+
+        }
+        [TestMethod]
+        public void NumbersInSequence()
+        {
+            Integer hereAreSomeIntegers = new Integer();
+            hereAreSomeIntegers.GenerateIntegers(8);
+            int should_be_seven = hereAreSomeIntegers.integers[7];
+            Assert.IsTrue(should_be_seven == 7);
+        }
     }
 }
