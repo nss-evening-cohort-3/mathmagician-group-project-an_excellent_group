@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Mathmagician.Tests
@@ -29,9 +30,7 @@ namespace Mathmagician.Tests
         {
             Integer int_sequence = new Integer();
             int_sequence.GenerateIntegers(5);
-            int last_int = int_sequence.integers[4];
-            int next_last_int = int_sequence.integers[3];
-            Assert.IsTrue(last_int != next_last_int);
+            CollectionAssert.AllItemsAreUnique(int_sequence.integers);
         }
         [TestMethod]
         public void WhatHappensIfYouInputZero()
@@ -62,6 +61,15 @@ namespace Mathmagician.Tests
             biggun.GenerateIntegers(123451);
             int InputNumberMinusOne = biggun.integers[123450];
             Assert.IsTrue(InputNumberMinusOne == 123450);
+        }
+        [TestMethod]
+        public void CheckForExactSequence()
+        {
+            Integer exact_sequence = new Integer();
+            exact_sequence.GenerateIntegers(10);
+            List<int> zero_through_nine = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            CollectionAssert.AreEqual(exact_sequence.integers, zero_through_nine);
+
         }
     }
 }
