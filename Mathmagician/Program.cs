@@ -38,8 +38,15 @@ namespace Mathmagician
                 isItAnInt = (Int32.TryParse(makeIntoAnInt, out printThisManyNumbers));
                 if (isItAnInt)
                 {
-                    Console.WriteLine("Printing " + printThisManyNumbers + " integers! MAGIC!");
-                    //call number-generating method here. ex: Integers.GenerateIntegers(printThisManyNumbers)
+                    if (printThisManyNumbers < 0)
+                    {
+                        Console.WriteLine("A negative? Sounds like you owe me some numbers! Pay up! Or, press a key to exit.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Printing " + printThisManyNumbers + " integers! MAGIC!");
+                        //call number-generating method here. ex: Integers.GenerateIntegers(printThisManyNumbers)
+                    }
                 }
                 else
                 {
@@ -59,8 +66,15 @@ namespace Mathmagician
                 isItAnInt = (Int32.TryParse(makeIntoAnInt, out printThisManyNumbers));
                 if (isItAnInt)
                 {
-                    Console.WriteLine("Printing " + printThisManyNumbers + " Fibonaccis! MAGIC!");
-                    //call number-generating method here. ex: Integers.GenerateIntegers(printThisManyNumbers)
+                    if (printThisManyNumbers < 0)
+                    {
+                        Console.WriteLine("A negative? Sounds like you owe me some numbers! Pay up! Or, press a key to exit.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Printing " + printThisManyNumbers + " integers! MAGIC!");
+                        //call number-generating method here. ex: Integers.GenerateIntegers(printThisManyNumbers)
+                    }
                 }
                 else
                 {
@@ -79,8 +93,15 @@ namespace Mathmagician
                 isItAnInt = (Int32.TryParse(makeIntoAnInt, out printThisManyNumbers));
                 if (isItAnInt)
                 {
-                    Console.WriteLine("Printing " + printThisManyNumbers + " primes! MAGIC!");
-                    //call number-generating method here. ex: Integers.GenerateIntegers(printThisManyNumbers)
+                    if (printThisManyNumbers < 0)
+                    {
+                        Console.WriteLine("A negative? Sounds like you owe me some numbers! Pay up! Or, press a key to exit.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Printing " + printThisManyNumbers + " integers! MAGIC!");
+                        //call number-generating method here. ex: Integers.GenerateIntegers(printThisManyNumbers)
+                    }
                 }
                 else
                 {
@@ -99,8 +120,15 @@ namespace Mathmagician
                 isItAnInt = (Int32.TryParse(makeIntoAnInt, out printThisManyNumbers));
                 if (isItAnInt)
                 {
-                    Console.WriteLine("Printing " + printThisManyNumbers + " evens! MAGIC!");
-                    //call number-generating method here. ex: Integers.GenerateIntegers(printThisManyNumbers)
+                    if (printThisManyNumbers < 0)
+                    {
+                        Console.WriteLine("A negative? Sounds like you owe me some numbers! Pay up! Or, press a key to exit.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Printing " + printThisManyNumbers + " integers! MAGIC!");
+                        //call number-generating method here. ex: Integers.GenerateIntegers(printThisManyNumbers)
+                    }
                 }
                 else
                 {
@@ -119,8 +147,15 @@ namespace Mathmagician
                 isItAnInt = (Int32.TryParse(makeIntoAnInt, out printThisManyNumbers));
                 if (isItAnInt)
                 {
-                    Console.WriteLine("Printing " + printThisManyNumbers + " odds! MAGIC!");
-                    //call number-generating method here. ex: Integers.GenerateIntegers(printThisManyNumbers)
+                    if (printThisManyNumbers < 0)
+                    {
+                        Console.WriteLine("A negative? Sounds like you owe me some numbers! Pay up! Or, press a key to exit.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Printing " + printThisManyNumbers + " integers! MAGIC!");
+                        //call number-generating method here. ex: Integers.GenerateIntegers(printThisManyNumbers)
+                    }
                 }
                 else
                 {
