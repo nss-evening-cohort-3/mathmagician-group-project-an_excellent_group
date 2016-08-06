@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Mathmagician.Tests
@@ -17,7 +18,7 @@ namespace Mathmagician.Tests
         {
             Fibonacci new_fib = new Fibonacci();
             new_fib.GenerateFibonacci(1);
-            int fibToCheck = new_fib.sequence[0];
+            int fibToCheck = new_fib.Fibonaccis[0];
             Assert.IsNotNull(fibToCheck);
         }
         [TestMethod]
@@ -27,30 +28,30 @@ namespace Mathmagician.Tests
             fibWithZero.GenerateFibonacci(0);
             //the array already contains the first two numbers, 1 1
             //this assert makes sure no new numbers were added.
-            Assert.IsTrue(fibWithZero.sequence.Count == 2);
+            Assert.IsTrue(fibWithZero.Fibonaccis.Count == 0);
         }
         [TestMethod]
         public void AreTheyFibonacciNumbers()
         {
             Fibonacci fibSequence = new Fibonacci();
             fibSequence.GenerateFibonacci(18);
-            int last_fib = fibSequence.sequence[17];
-            int next_last_fib = fibSequence.sequence[16];
-            int third_last_fib = fibSequence.sequence[15];
+            int last_fib = fibSequence.Fibonaccis[17];
+            int next_last_fib = fibSequence.Fibonaccis[16];
+            int third_last_fib = fibSequence.Fibonaccis[15];
             Assert.IsTrue(last_fib == (next_last_fib + third_last_fib));
         }
         [TestMethod]
         public void CheckIfTheListWorks()
         {
             Fibonacci checkForList = new Fibonacci();
-            Assert.IsNotNull(checkForList.sequence);
+            Assert.IsNotNull(checkForList.Fibonaccis);
         }
         [TestMethod]
         public void CheckForExpectedNumber()
         {
             Fibonacci checkNumberOrder = new Fibonacci();
             checkNumberOrder.GenerateFibonacci(3);
-            int third_fibonacci = checkNumberOrder.sequence[2];
+            int third_fibonacci = checkNumberOrder.Fibonaccis[2];
             Assert.IsTrue(third_fibonacci == 2);
         }
         [TestMethod]
@@ -58,8 +59,8 @@ namespace Mathmagician.Tests
         {
             Fibonacci firstTwoNumbers = new Fibonacci();
             firstTwoNumbers.GenerateFibonacci(2);
-            int first_fibonacci = firstTwoNumbers.sequence[0];
-            int second_fibonacci = firstTwoNumbers.sequence[1];
+            int first_fibonacci = firstTwoNumbers.Fibonaccis[0];
+            int second_fibonacci = firstTwoNumbers.Fibonaccis[1];
             Assert.IsTrue(first_fibonacci == 1);
             Assert.IsTrue(second_fibonacci == 1);
         }
@@ -68,10 +69,27 @@ namespace Mathmagician.Tests
         {
             Fibonacci bigNumber = new Fibonacci();
             bigNumber.GenerateFibonacci(123451);
-            int third_last_fibonacci = bigNumber.sequence[123448];
-            int second_last_fibonacci = bigNumber.sequence[123449];
-            int last_fibonacci = bigNumber.sequence[123450];
+            int third_last_fibonacci = bigNumber.Fibonaccis[123448];
+            int second_last_fibonacci = bigNumber.Fibonaccis[123449];
+            int last_fibonacci = bigNumber.Fibonaccis[123450];
             Assert.IsTrue(last_fibonacci == (third_last_fibonacci + second_last_fibonacci));
+        }
+        [TestMethod]
+        public void WhatHappensIfYouEnterOne()
+        {
+            Fibonacci fib_one = new Fibonacci();
+            fib_one.GenerateFibonacci(1);
+            List<int> ListContainingOne = new List<int> { 1 };
+            CollectionAssert.AreEqual(fib_one.Fibonaccis, ListContainingOne);
+        }
+        [TestMethod]
+        public void CheckForExactSequene()
+        {
+            Fibonacci five_fibonaccis = new Fibonacci();
+            five_fibonaccis.GenerateFibonacci(5);
+            List<int> first_five_fibs = new List<int> { 1, 1, 2, 3, 5 };
+            CollectionAssert.AreEqual(five_fibonaccis.Fibonaccis, first_five_fibs);
+
         }
     }
 }
