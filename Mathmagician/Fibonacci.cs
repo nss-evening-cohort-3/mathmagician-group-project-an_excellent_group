@@ -19,33 +19,30 @@ namespace Mathmagician
         //it simply prints off the first or first two numbers in the 'sequence' list.
         //ask for more than 3, and it will add 1 and 1 to the list, 
         //start generatin' fibbos, add the generated numbers to the list, rinse & repeat 
-        public void GenerateFibonacci(int numOfFibonacci)
+        public int[] GenerateFibonacci(int numOfFibonacci)
         {
             if (numOfFibonacci == 0 )
             {
-                Console.WriteLine("Don't want any Fibonacci numbers, eh? More for me, the MATHMAGICIAN!!");
+                return Fibonaccis.ToArray();
             }
             else if ( numOfFibonacci < 3 )
             {
                 for ( int i = 0 ; i < numOfFibonacci; i++ )
                 {
-                    Console.WriteLine("> " + FirstTwoInSequence[i]);
                     Fibonaccis.Add(FirstTwoInSequence[i]);
                 }
+                return Fibonaccis.ToArray();
             }
             else
             {
-                Console.WriteLine("> " + FirstTwoInSequence[0]);
-                Console.WriteLine("> " + FirstTwoInSequence[1]);
                 Fibonaccis = FirstTwoInSequence;
                 for ( int i = 2; i < numOfFibonacci ; i++)
                 {
                     int newFibonacci = Fibonaccis[i - 2] + Fibonaccis[i - 1];
-                    Console.WriteLine("> " + newFibonacci);
                     Fibonaccis.Add(newFibonacci);
                 }
+                return Fibonaccis.ToArray();
             }
-            Console.WriteLine("Have I slaked your Fibonacci thirst? The Mathmagician strikes again!");
         }
     }
 }
