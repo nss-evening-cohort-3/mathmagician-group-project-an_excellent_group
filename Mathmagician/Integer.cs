@@ -16,19 +16,19 @@ namespace Mathmagician
         
         //method takes an int, increments the counter that many times, outputs 
         //each number along the way & adds it to the list
-        public void GenerateIntegers(int numOfIntegers)
+        public int[] GenerateIntegers(int numOfIntegers)
         {
             if (numOfIntegers == 0)
             {
-                Console.WriteLine("Here are the integers you didn't request! I hope you are pleased by their absence. Press any key to close.");
+                return integers.ToArray();
             }
             else {
                 for (int i = 0; i < numOfIntegers; i++)
                 {   
-                    Console.WriteLine("> " + newInteger);
                     integers.Add(newInteger);
                     newInteger += 1;
                 }
+                return integers.ToArray();
             }
         }
     }
