@@ -19,13 +19,13 @@ namespace Mathmagician.Tests
             Fibonacci new_fib = new Fibonacci();
             new_fib.GenerateFibonacci(1);
             int fibToCheck = new_fib.Fibonaccis[0];
-            Assert.IsNotNull(fibToCheck);
+            Assert.IsTrue(fibToCheck == 1);
         }
         [TestMethod]
         public void WhatHappensIfYouEnterZero()
         {
             Fibonacci fibWithZero = new Fibonacci();
-            fibWithZero.GenerateFibonacci(0);
+            int[] empty_array = fibWithZero.GenerateFibonacci(0);
             //the array already contains the first two numbers, 1 1
             //this assert makes sure no new numbers were added.
             Assert.IsTrue(fibWithZero.Fibonaccis.Count == 0);
