@@ -170,7 +170,12 @@ namespace Mathmagician
                     else
                     {
                         Console.WriteLine("Printing " + printThisManyNumbers + " odds! MAGIC!");
-                        //call number-generating method here. ex: Integers.GenerateIntegers(printThisManyNumbers)
+                        OddNumber odd = new OddNumber();
+                        int[] oddArray = odd.CreateOddNumberList(printThisManyNumbers).ToArray();
+                        for (int i = 0; i < printThisManyNumbers; i++)
+                        {
+                            Console.WriteLine("> " + oddArray[i]);
+                        }
                     }
                 }
                 else
