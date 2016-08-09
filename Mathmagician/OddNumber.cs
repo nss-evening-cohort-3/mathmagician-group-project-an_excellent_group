@@ -15,7 +15,7 @@ namespace Mathmagician
             //Create an empty list that the numbers will go inside of.
             List<int> usernumbers = new List<int>();
 
-            //create the number that the list will start at
+            //create the number that the list will start at all the time.
             int mycounter = 1;
 
             //loop through the number that represents the number of even numbers that the user wants
