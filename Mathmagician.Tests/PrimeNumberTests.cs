@@ -24,9 +24,9 @@ namespace Mathmagician.Tests
             PrimeNumber newprime = new PrimeNumber();
 
             //This will test to see if "2" is a prime number.
-            newprime.CheckIfNumberIsPrime(2);
+           bool checkprime = newprime.CheckIfNumberIsPrime(2);
 
-            Assert.IsTrue(newprime.CheckIfNumberIsPrime(2));
+            Assert.IsTrue(checkprime);
         }
 
         [TestMethod]
