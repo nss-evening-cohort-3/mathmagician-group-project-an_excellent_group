@@ -35,7 +35,7 @@ namespace Mathmagician
 
                
             }
-            //Otherwise, the method returns true.
+            //Otherwise, the method returns true since having a remainder means the number is prime.
             return true; 
             
         }
