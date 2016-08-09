@@ -137,6 +137,12 @@ namespace Mathmagician
                     else
                     {
                         Console.WriteLine("Printing " + printThisManyNumbers + " evens! MAGIC!");
+                        EvenNumber evens = new EvenNumber();
+                        int[] evenArray = evens.CreateEvennNumberList(printThisManyNumbers).ToArray();
+                        for (int i = 0; i < printThisManyNumbers; i++)
+                        {
+                            Console.WriteLine("> " + evenArray[i]);
+                        }
                         //call number-generating method here. ex: Integers.GenerateIntegers(printThisManyNumbers)
                     }
                 }
