@@ -110,7 +110,12 @@ namespace Mathmagician
                     else
                     {
                         Console.WriteLine("Printing " + printThisManyNumbers + " primes! MAGIC!");
-                        //call number-generating method here. ex: Integers.GenerateIntegers(printThisManyNumbers)
+                        PrimeNumber prime = new PrimeNumber();
+                        int[] primeArray = prime.CreatePrimeNumberList(printThisManyNumbers).ToArray();
+                        for (int i=0; i < printThisManyNumbers; i++)
+                        {
+                            Console.WriteLine("> " + primeArray[i]);
+                        }
                     }
                 }
                 else
