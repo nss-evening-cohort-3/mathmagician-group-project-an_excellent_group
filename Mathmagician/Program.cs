@@ -45,7 +45,12 @@ namespace Mathmagician
                     else
                     {
                         Console.WriteLine("Printing " + printThisManyNumbers + " integers! MAGIC!");
-                        //call number-generating method here. ex: Integers.GenerateIntegers(printThisManyNumbers)
+                        Integer integer = new Integer();
+                        int[] intArray = integer.GenerateIntegers(printThisManyNumbers);
+                        for (int i = 0; i < printThisManyNumbers; i++)
+                        {
+                            Console.WriteLine("> " + intArray[i]); 
+                        }
                     }
                 }
                 else
@@ -73,7 +78,12 @@ namespace Mathmagician
                     else
                     {
                         Console.WriteLine("Printing " + printThisManyNumbers + " Fibonaccis! MAGIC!");
-                        //call number-generating method here. ex: Integers.GenerateIntegers(printThisManyNumbers)
+                        Fibonacci fibonacci = new Fibonacci();
+                        int[] fibArray = fibonacci.GenerateFibonacci(printThisManyNumbers);
+                        for (int i = 0; i < printThisManyNumbers; i++)
+                        {
+                            Console.WriteLine("> " + fibArray[i]);
+                        }
                     }
                 }
                 else
